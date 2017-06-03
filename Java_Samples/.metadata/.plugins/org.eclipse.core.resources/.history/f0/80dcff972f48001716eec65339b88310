@@ -1,0 +1,34 @@
+import java.text.DecimalFormat;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String input;
+		Land landCalc = new Land();
+		DecimalFormat twoDec = new DecimalFormat("#0.00");
+		
+		
+//		input = JOptionPane.showInputDialog("What is the area?");
+//	    double area = Double.parseDouble(input);
+//	    
+//	    input = JOptionPane.showInputDialog("Enter the length and width:");
+//	    int k = input.indexOf(' ');//To separate reading from string
+//	    int length = Integer.parseInt(input.substring(0,k));
+//	    int width = Integer.parseInt(input.substring(k+1));
+//	    
+		landCalc.areaInput();
+		landCalc.length_and_Width_Input();
+	    landCalc.enclosureCalculation();
+	 
+		
+
+	    
+	    JOptionPane.showMessageDialog(null, "Your enclosure has dimensions " + twoDec.format(landCalc.getNumX()) + 
+	    		" feet by " + twoDec.format(landCalc.getNumY())+ " feet.\n You will need " + twoDec.format(landCalc.getNumZ())+ " feet of fence total.");
+	    
+
+	}
+
+}

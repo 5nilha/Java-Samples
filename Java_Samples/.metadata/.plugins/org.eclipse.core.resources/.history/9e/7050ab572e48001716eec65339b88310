@@ -1,0 +1,49 @@
+
+public class Land {
+	
+	int length, width;
+	double area,root,numX,numY,numZ;
+
+	public Land(){
+		
+	}
+	
+	public double getLength(){
+		return this.length;
+	}
+
+	public void setLength(int length){
+		this.length = length;
+	}
+	public void setArea(double area) {
+		this.area = area;
+	}
+	public void setWidth(int width) {
+		this.width = width;
+	}
+	
+	public double getNumX(){
+		return this.numX;
+	}
+	
+	public double getNumY(){
+		return this.numY;
+	}
+	public double getNumZ(){
+		return this.numZ;
+	}
+	
+	public static double rootCalculation(double area, int length, int width){
+		return Math.sqrt(area/(length*width));//Solves the equation for common number
+	}
+
+	public void Calculation(double area, int length, int width){
+		double root;
+		root = rootCalculation(area, length, width);
+		this.numX = length * root;
+	    this.numY = width * root;
+	    this.numZ = (2*numX)+(2*numY);
+	}
+	
+	
+}
